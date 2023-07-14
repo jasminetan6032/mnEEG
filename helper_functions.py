@@ -1,5 +1,7 @@
 from os.path import join
+import os.path as op
 import config as cfg
+import mne
 import glob
 
 def get_subject_paths(subject):
@@ -10,3 +12,16 @@ def get_subject_paths(subject):
     file = glob.glob(join(cfg.subjects_dir,subject,'*_epo.fif'))
 
     return file
+
+def get_fs_average():
+    """
+    gets bem filepath
+    """
+    
+    mne_dataset_dir = mne.get_config('MNE_DATASETS_SAMPLE_PATH')
+    fsaverage_dir = [join(mne_dataset_dir, 'MNE-sample-data','subjects','fsaverage')]
+    
+    # bem_filepath = join(fsaverage_dir,'bem','fsaverage-ico-5-src.fif')
+    print(f'The bem filepath is {fsaverage_dir}')
+    
+    return fsaverage_dir #, bem_filepath

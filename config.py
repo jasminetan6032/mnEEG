@@ -1,2 +1,2 @@
 
-subjects_dir = '/local_mount/space/hypatia/2/users/Jasmine/mnEEG_subjects'
+subjects_dir = 'D:/source_hackaton/mneEEG_subject/'
