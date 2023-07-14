@@ -15,7 +15,7 @@ for sub_i in subjects:
     # epoch data
 
     # forward modeling
-    sub.forward_modeling(overwrite=False)
+    sub.forward_modeling(sub_i, overwrite=False)
 
     # source localization
     sub.source_localization(overwrite=False)
