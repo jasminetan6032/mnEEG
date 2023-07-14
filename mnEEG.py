@@ -1,4 +1,5 @@
 import config as cfg
+import mne
 
 class mnEEG():
     """
@@ -15,7 +16,10 @@ class mnEEG():
         Computes forward solution
 
         """ 
-    
+
+        for file in self.epoch_files:
+            epochs = mne.read_epochs(file)
+            
     def source_localization():
         """
         Computes forward solution
