@@ -1,2 +1,2 @@
 
-subjects_dir = '/local_mount/space/tapputi/1/users/sergio/mneEEG_subjects'
+subjects_dir = '/local_mount/space/hypatia/2/users/Jasmine/mnEEG_subjects'
