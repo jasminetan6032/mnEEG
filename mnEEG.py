@@ -1,6 +1,6 @@
 import config as cfg
 import mne
-from helper_functions import get_subject_paths
+from helper_functions import get_subject_paths, get_fs_average#, get_bem_surfaces
 
 class mnEEG():
     """
@@ -13,7 +13,6 @@ class mnEEG():
         self.ica_files    =  []
         self.epoch_files  =  get_subject_paths(self.id)
         self.fsaverage    =  get_fs_average()
-        self.bem_surfaces = get_bem_surfaces()
 
 
     def forward_modeling():
