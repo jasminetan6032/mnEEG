@@ -1,7 +1,7 @@
 from mnEEG import mnEEG
 
 # subject identifier or function to get all subject identifiers
-subjects = ['sub-02']  
+subjects = ['sub-05']  
 
 for sub_i in subjects:
 
