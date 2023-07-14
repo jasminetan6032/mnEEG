@@ -15,7 +15,7 @@ class mnEEG():
         self.fsaverage    =  get_fs_average()
 
 
-    def forward_modeling():
+    def forward_modeling(self, overwrite=False ):
         """
         Computes forward solution
 
@@ -24,7 +24,7 @@ class mnEEG():
         for file in self.epoch_files:
             epochs = mne.read_epochs(file)
 
-    def source_localization():
+    def source_localization(self, overwrite=False):
         """
         Computes forward solution
 
