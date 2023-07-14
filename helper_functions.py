@@ -2,14 +2,15 @@ from os.path import join
 import os.path as op
 import config as cfg
 import mne
-import glob
+from os import walk
 
 def get_subject_paths(subject):
     """
     get paths to relevant files for the specified subject
 
     """
-    file = glob.glob(join(cfg.subjects_dir,subject,'*_epo.fif'))
+    for roots,dirs,files in walk(join(cfg.subjects_dir,subject), topdown=False):
+        file = [i for i in files if 'epo.fif' in i]
 
     return file
 
