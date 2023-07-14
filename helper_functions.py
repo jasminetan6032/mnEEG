@@ -10,7 +10,7 @@ def get_subject_paths(subject):
 
     """
     for roots,dirs,files in walk(join(cfg.subjects_dir,subject), topdown=False):
-        file = [i for i in files if 'epo.fif' in i]
+        file = [join(roots,i) for i in files if 'epo.fif' in i]
 
     return file
 
